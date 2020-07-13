@@ -1,0 +1,22 @@
+.modal-img {
+  height: 400px;
+  width: 50%;
+}
+
+.flex-container {
+  width: 100%;
+  min-height: 400px;
+  margin: 0 auto;
+  display: -webkit-flex; /* Safari */
+  display: flex; /* Standard syntax */
+}
+.flex-container .column {
+  padding: 5px;
+  -webkit-flex: 1; /* Safari */
+  -ms-flex: 1; /* IE 10 */
+  flex: 1; /* Standard syntax */
+}
+
+strong {
+  color: #007bff;
+}
