@@ -12,7 +12,11 @@ const MovieItem = ({ movie, onFetchDetails }) => {
             movie.id,
             movie.name,
             movie.summary,
-            movie.image.original
+            movie.image.original,
+            movie.genres,
+            movie.rating.average,
+            movie.premiered,
+            movie.status
           )
         }
       >
