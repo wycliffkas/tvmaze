@@ -6,11 +6,19 @@ module.exports = buildSchema(`
         original: String
     }
 
+    type Rate {
+        average: Float
+    }
+
     type Show {
         id: Int,
         name: String,
         image: Images,
         summary: String, 
+        genres: [String],
+        rating: Rate,
+        premiered: String,
+        status: String
     }
 
     type personDetails {
@@ -38,4 +46,4 @@ module.exports = buildSchema(`
     schema {
         query: RootQuery
     }
-`)
+`);
