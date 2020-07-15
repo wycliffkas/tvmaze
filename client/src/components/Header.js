@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import Search from "../containers/Search";
 
@@ -19,24 +19,24 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <Link className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/">
             <img src={logo} alt="logo" width="120" height="30" />
-          </Link>
+          </NavLink>
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li className="nav-item active">
-              <Link className="nav-link" to="/">
-                Home <span className="sr-only">(current)</span>
-              </Link>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/" exact={true}>
+                Home
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">
-                Link
-              </Link>
+              <NavLink className="nav-link" to="/watchlist">
+                Watch List
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link disabled" to="#">
-                Disabled
-              </Link>
+              <NavLink className="nav-link" to="/favourite">
+                Favourite
+              </NavLink>
             </li>
           </ul>
           <Search />

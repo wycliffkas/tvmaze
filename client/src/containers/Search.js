@@ -10,10 +10,6 @@ class Search extends Component {
     moviesDb: [],
   };
 
-  componentDidMount() {
-    console.log("this.props.movies", this.props.movies);
-  }
-
   onChangeTerm = (event) => {
     this.setState({
       term: event.target.value,
@@ -40,10 +36,10 @@ class Search extends Component {
     return (
       <div>
         <form>
-          <div class="input-group">
-            <div class="input-group-prepend">
+          <div className="input-group">
+            <div className="input-group-prepend">
               <select
-                class="custom-select"
+                className="custom-select"
                 id="inputGroupSelect01"
                 onChange={this.onChangeTerm}
               >
@@ -57,15 +53,15 @@ class Search extends Component {
             </div>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               aria-label="Search input with dropdown button"
               name="query"
               onChange={this.onChangeQuery}
               value={this.state.query}
             />
-            <div class="input-group-append">
+            <div className="input-group-append">
               <button
-                class="btn btn-outline-success"
+                className="btn btn-outline-success"
                 type="button"
                 onClick={this.onSubmitSearch}
               >
