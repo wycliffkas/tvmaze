@@ -5,7 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MovieItem from "../components/MovieItem";
 import Loader from "../common/Loader";
 import * as actions from "../store/actions/index";
-import MovieDetail from "./MovieDetail";
+import MovieDetail from "../components/MovieDetail";
+import { addToFavourites, addToWatchList } from "../utils/addToList";
 
 class Movie extends Component {
   state = {
@@ -27,7 +28,8 @@ class Movie extends Component {
     id,
     name,
     summary,
-    imageUrl,
+    imageUrlMedium,
+    imageUrlOriginal,
     genre,
     rating,
     premiered,
@@ -40,7 +42,8 @@ class Movie extends Component {
       id,
       name,
       summary,
-      imageUrl,
+      imageUrlMedium,
+      imageUrlOriginal,
       genre,
       rating,
       premiered,
@@ -76,8 +79,18 @@ class Movie extends Component {
         <Modal show={this.state.isOpen} onHide={this.hideModal} size="lg">
           <Modal.Body>{movieDetails}</Modal.Body>
           <Modal.Footer>
-            <button>Add to Watch List</button>
-            <button>Add to Favourite</button>
+            <button
+              onClick={() => addToWatchList(this.props.movieDetails)}
+              className="btn btn-primary"
+            >
+              Add to Watch List
+            </button>
+            <button
+              onClick={() => addToFavourites(this.props.movieDetails)}
+              className="btn btn-primary"
+            >
+              Add to Favourite
+            </button>
           </Modal.Footer>
         </Modal>
       </div>
@@ -101,7 +114,8 @@ const mapDispatchToProps = (dispatch) => {
       id,
       name,
       summary,
-      imageUrl,
+      imageUrlMedium,
+      imageUrlOriginal,
       genre,
       rating,
       premiered,
@@ -112,7 +126,8 @@ const mapDispatchToProps = (dispatch) => {
           id,
           name,
           summary,
-          imageUrl,
+          imageUrlMedium,
+          imageUrlOriginal,
           genre,
           rating,
           premiered,

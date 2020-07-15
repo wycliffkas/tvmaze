@@ -6,7 +6,7 @@ const MovieDetail = ({ movieData }) => {
       <div className="flex-container">
         <div className="column">
           <img
-            src={movieData.imageUrl}
+            src={movieData.imageUrlOriginal}
             className="modal-img card-img-top"
             alt={`${movieData.name} movie poster`}
           />

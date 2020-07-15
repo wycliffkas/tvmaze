@@ -19,7 +19,6 @@ const searchMovies = (movies, query, term) => {
         }
         return movie.premiered === query;
       case "genre":
-        console.log("genreeee")
         return movie.genres.includes(
           query.replace(/^(.)|\s+(.)/g, (c) => c.toUpperCase())
         );
