@@ -7,8 +7,10 @@ import Loader from "../common/Loader";
 import * as actions from "../store/actions/index";
 import MovieDetail from "../components/MovieDetail";
 import { addToFavourites, addToWatchList } from "../utils/addToList";
+import Header from "../components/Header";
 
 class Movie extends Component {
+  
   state = {
     isOpen: false,
   };
@@ -74,26 +76,29 @@ class Movie extends Component {
       movieDetails = <MovieDetail movieData={this.props.movieDetails} />;
     }
     return (
-      <div className="row no-gutters justify-content-center">
-        {movies}
-        <Modal show={this.state.isOpen} onHide={this.hideModal} size="lg">
-          <Modal.Body>{movieDetails}</Modal.Body>
-          <Modal.Footer>
-            <button
-              onClick={() => addToWatchList(this.props.movieDetails)}
-              className="btn btn-primary"
-            >
-              Add to Watch List
-            </button>
-            <button
-              onClick={() => addToFavourites(this.props.movieDetails)}
-              className="btn btn-primary"
-            >
-              Add to Favourite
-            </button>
-          </Modal.Footer>
-        </Modal>
-      </div>
+      <>
+        <Header />
+        <div className="row no-gutters justify-content-center">
+          {movies}
+          <Modal show={this.state.isOpen} onHide={this.hideModal} size="lg">
+            <Modal.Body>{movieDetails}</Modal.Body>
+            <Modal.Footer>
+              <button
+                onClick={() => addToWatchList(this.props.movieDetails)}
+                className="btn btn-primary"
+              >
+                Add to Watch List
+              </button>
+              <button
+                onClick={() => addToFavourites(this.props.movieDetails)}
+                className="btn btn-primary"
+              >
+                Add to Favourite
+              </button>
+            </Modal.Footer>
+          </Modal>
+        </div>
+      </>
     );
   }
 }
