@@ -10,7 +10,6 @@ import { addToFavourites, addToWatchList } from "../utils/addToList";
 import Header from "../components/Header";
 
 class Movie extends Component {
-  
   state = {
     isOpen: false,
   };

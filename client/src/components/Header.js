@@ -32,7 +32,7 @@ const Header = () => {
           </NavLink>
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/movies" exact={true}>
+              <NavLink className="nav-link" to="/" exact={true}>
                 Home
               </NavLink>
             </li>
