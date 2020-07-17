@@ -1,5 +1,5 @@
-# The Movies Database(Tv Maze)
 
+# Tv Maze Application
 A creative web application that uses `Tv maze api` to enable users keep track of their TV Shows.
 
 ## Features
@@ -21,12 +21,25 @@ A creative web application that uses `Tv maze api` to enable users keep track of
 #### installation
 
 - Clone the repository on the local environment by running:
-  `git clone https://github.com/wycliffkas/tvmaze.git`
+
+  ```
+  git clone https://github.com/wycliffkas/tvmaze.git
+  ```
+
 - Create a .env file and add the variables below:
- `MONGO_DB_CONNECTION_STRING=<Mongo database connection string>`
- `JWT_SECRET=<jwt secret key>`
+
+  ```
+  MONGO_DB_CONNECTION_STRING=<your Mongo database connection string>
+  ```
+  ```
+  JWT_SECRET=<your jwt secret key>
+  ```
+
 - Run `npm install` if you use npm or `yarn` if you use yarn, inorder to install dependencies in both the server and client directories.
-- Run `yarn dev` to launch the app which will automatically launch the app in the browser.
+
+
+- Change to the server directory then Run `yarn dev` to launch the app which will automatically launch the app in the browser.
+
 
 ## Available Scripts
 
