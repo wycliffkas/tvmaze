@@ -4,7 +4,7 @@
   "description": "a creative web application that enables users keep track of their TV shows",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "server": "nodemon app.js",
     "client": "yarn --cwd ../client run start",
     "dev": "concurrently -k \"yarn run server\" \"yarn run client\""

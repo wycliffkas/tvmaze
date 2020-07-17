@@ -25,20 +25,11 @@ A creative web application that uses `Tv maze api` to enable users keep track of
   ```
   git clone https://github.com/wycliffkas/tvmaze.git
   ```
-
-- Create a .env file and add the variables below:
-
-  ```
-  MONGO_DB_CONNECTION_STRING=<your Mongo database connection string>
-  ```
-  ```
-  JWT_SECRET=<your jwt secret key>
-  ```
-
 - Run `npm install` if you use npm or `yarn` if you use yarn, inorder to install dependencies in both the server and client directories.
 
+- Change to the `server` directory then Run `yarn start` to start the server.
 
-- Change to the server directory then Run `yarn dev` to launch the app which will automatically launch the app in the browser.
+- Change to the `client` directory then Run `yarn start` to automatically launch the app in the browser.
 
 ## Available Scripts
 

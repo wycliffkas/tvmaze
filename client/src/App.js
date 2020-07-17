@@ -10,7 +10,7 @@ import Favourite from "./containers/Favourite";
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import history from "./utils/history";
-import { PrivateRoute } from "./common/PrivateRoute";
+// import { PrivateRoute } from "./common/PrivateRoute";
 
 const App = () => {
   return (
@@ -19,10 +19,10 @@ const App = () => {
         <ToastContainer />
         <Switch>
           <Route path="/signup" component={Signup} />
-          <PrivateRoute path="/watchlist" component={WatchList} />
-          <PrivateRoute path="/favourite" component={Favourite} />
-          <PrivateRoute path="/movies" component={Movie} />
-          <Route exact path="/" component={Login} />
+          <Route path="/watchlist" component={WatchList} />
+          <Route path="/favourite" component={Favourite} />
+          <Route path="/login" component={Login} />
+          <Route exact path="/" component={Movie} />
           <Route component={NotFound} />
         </Switch>
       </Router>
