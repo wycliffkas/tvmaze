@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import MovieList from "../components/MovieList";
 import Loader from "../common/Loader";
+import Header from "../components/Header";
 
 class WatchList extends Component {
+
   state = {
     watchList: [],
   };
+
   componentDidMount() {
     const moviesWatchList = JSON.parse(
       localStorage.getItem("watchList") || "[]"
@@ -13,6 +16,7 @@ class WatchList extends Component {
 
     this.setState({ watchList: moviesWatchList });
   }
+  
   render() {
     let movies = <Loader />;
     if (this.state.watchList.length === 0) {
@@ -29,7 +33,10 @@ class WatchList extends Component {
       ));
     }
     return (
-      <div className="row no-gutters justify-content-center">{movies}</div>
+      <>
+        <Header />
+        <div className="row no-gutters justify-content-center">{movies}</div>
+      </>
     );
   }
 }

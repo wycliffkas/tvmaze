@@ -2,8 +2,16 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import Search from "../containers/Search";
+import history from "../utils/history";
 
 const Header = () => {
+  
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    history.push("/");
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,7 +32,7 @@ const Header = () => {
           </NavLink>
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/" exact={true}>
+              <NavLink className="nav-link" to="/movies" exact={true}>
                 Home
               </NavLink>
             </li>
@@ -40,6 +48,17 @@ const Header = () => {
             </li>
           </ul>
           <Search />
+          <ul className="navbar-nav mr-2  ml-3 mt-2 mt-lg-0">
+            <li className="nav-item">
+              <NavLink
+                className="nav-link header-link"
+                to="/"
+                onClick={handleLogout}
+              >
+                Logout
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>
