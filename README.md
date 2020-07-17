@@ -1,5 +1,5 @@
-# Tv Maze Application
 
+# Tv Maze Application
 A creative web application that uses `Tv maze api` to enable users keep track of their TV Shows.
 
 ## Features
@@ -39,6 +39,7 @@ A creative web application that uses `Tv maze api` to enable users keep track of
 
 
 - Change to the server directory then Run `yarn dev` to launch the app which will automatically launch the app in the browser.
+
 
 ## Available Scripts
 
