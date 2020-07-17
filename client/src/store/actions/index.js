@@ -8,3 +8,5 @@ export {
   clearMovieDetails,
   updateMovieResults,
 } from "./movie";
+
+export { registerUser, loginUser } from "./user";

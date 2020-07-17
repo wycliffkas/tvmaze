@@ -8,10 +8,12 @@ import "./assets/css/loader.css";
 import "./assets/css/style.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import movieReducer from "./store/reducers/movie"
+import movieReducer from "./store/reducers/movie";
+import userReducer from "./store/reducers/user";
 
 const rootReducer = combineReducers({
   movies: movieReducer,
+  user: userReducer,
 });
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

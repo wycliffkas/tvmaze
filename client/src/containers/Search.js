@@ -4,6 +4,7 @@ import * as actions from "../store/actions/index";
 import searchMovies from "../utils/searchMovies";
 
 class Search extends Component {
+  
   state = {
     query: "",
     term: "",
@@ -43,7 +44,7 @@ class Search extends Component {
                 id="inputGroupSelect01"
                 onChange={this.onChangeTerm}
               >
-                <option selected>All</option>
+                <option value="">All</option>
                 <option value="name">Name</option>
                 <option value="genre">Genre</option>
                 <option value="rating">Rating</option>

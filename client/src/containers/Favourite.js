@@ -1,16 +1,22 @@
 import React, { Component } from "react";
 import MovieList from "../components/MovieList";
 import Loader from "../common/Loader";
+import Header from "../components/Header";
 
 class Favourite extends Component {
+  
   state = {
     favourite: [],
   };
+
   componentDidMount() {
-    const favouriteList = JSON.parse(localStorage.getItem("favourites") || "[]");
+    const favouriteList = JSON.parse(
+      localStorage.getItem("favourites") || "[]"
+    );
 
     this.setState({ favourite: favouriteList });
   }
+
   render() {
     let movies = <Loader />;
     if (this.state.favourite.length === 0) {
@@ -27,7 +33,10 @@ class Favourite extends Component {
       ));
     }
     return (
-      <div className="row no-gutters justify-content-center">{movies}</div>
+      <>
+        <Header />
+        <div className="row no-gutters justify-content-center">{movies}</div>
+      </>
     );
   }
 }
