@@ -23,7 +23,7 @@ export const fetchMovies = () => {
     };
     axios({
       method: "post",
-      url: "http://localhost:5000/graphql",
+      url: "http://localhost:8080/graphql",
       headers: {
         "Content-Type": "application/json",
       },
@@ -92,7 +92,7 @@ export const fetchMovieDetails = (
 
     const requestCrew = axios({
       method: "post",
-      url: "http://localhost:5000/graphql",
+      url: "http://localhost:8080/graphql",
       headers: {
         "Content-Type": "application/json",
       },
@@ -101,7 +101,7 @@ export const fetchMovieDetails = (
 
     const requestSeasons = axios({
       method: "post",
-      url: "http://localhost:5000/graphql",
+      url: "http://localhost:8080/graphql",
       headers: {
         "Content-Type": "application/json",
       },
